@@ -38,6 +38,9 @@ button:hover {
   align-items: center;
   transition: flex 1s ease;
 }
+.box:hover {
+  flex-basis: 87%;
+}
 
 .morning {
   background: linear-gradient(

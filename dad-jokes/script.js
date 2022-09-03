@@ -4,12 +4,18 @@ let nextJokeBtn = document.querySelector('.card button');
 showJoke();
 
 nextJokeBtn.addEventListener('click', () => {
+    showLoader();
     showJoke();
 })
 
+function showLoader() {
+    nextJokeBtn.setAttribute('disabled', true);
+    jokeHTML.innerHTML = '<i class="fas fa-atom fa-spin"></i>';
+}
 function showJoke() {
 
     getJoke().then((joke) => {
+        nextJokeBtn.removeAttribute('disabled');
         jokeHTML.innerText = joke;
     });
 

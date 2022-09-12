@@ -14,3 +14,17 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.box {
+  padding: 10px;
+}
+.box div {
+  text-align: center;
+  background-color: rgb(235, 235, 235);
+  padding: 10px;
+}

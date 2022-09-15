@@ -7,10 +7,70 @@
 body {
   font-family: "Outfit", sans-serif;
   margin: 0; /* resets browser defaults*/
-  overflow: hidden; /* no scrollbars by default */
+  background-color: aliceblue;
+}
+
+h1 {
+  text-align: center;
+}
+h2 {
+  font-size: 1.3rem;
+}
+button {
+  border: none;
+  background-color: transparent;
+}
+button:hover {
+  cursor: pointer;
+}
+.card {
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.question {
   display: flex;
-  height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.answer {
+  display: none;
+}
+
+.open {
+  background-color: white;
+  min-height: 150px;
+}
+.icon::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.open::before,
+.open::after {
+  content: "\f075";
+  font: var(--fa-font-regular);
+  position: absolute;
+  font-size: 7em;
+  opacity: 0.2;
+}
+
+.open::before {
+  color: #2ecc71;
+  bottom: 0;
+}
+.open::after {
+  color: #3498db;
+  top: 0;
+  left: -30px;
+  transform: rotateY(180deg);
+}
+.open .answer {
+  display: block;
 }

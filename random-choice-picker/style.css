@@ -19,7 +19,7 @@ body {
 p {
   text-align: center;
 }
-.choices {
+.choices-container {
   margin-top: 12px;
   color: white;
 }
@@ -35,4 +35,8 @@ textarea {
   font-size: var(--font-size-2);
   border: none;
   margin: 5px auto;
+}
+
+.chosen {
+  background-color: var(--indigo-9);
 }

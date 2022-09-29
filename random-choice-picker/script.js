@@ -8,8 +8,8 @@ function createChoices(e) {
     let choiceArray = e.target.value.split(',');
     let choices = choiceArray.map((choice) => choice.trim() && `<span>${choice.trim()}</span>`)
     choicesContainer.innerHTML = choices.join('');
-    if (e.key = 'Enter') {
-        selectRandomChoice()
+    if (e.key == 'Enter') {
+        selectRandomChoice();
     }
 }
 
